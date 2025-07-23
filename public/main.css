@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  direction: rtl;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin:40px auto;
+}
+
+
+.sound{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  color: #fff;
+}
+.sound > div{
+  line-height: 50px;
+  font-size: 25px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #4CAF50;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.sound > div:hover{
+  transform: scale(1.2);
+}

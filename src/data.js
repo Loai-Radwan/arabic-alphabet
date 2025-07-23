@@ -1,0 +1,173 @@
+const arabicAlphabet = [
+  {
+    name: "ألف",
+    letter: "أ",
+    img: "/assets/imgs/alif.png",
+    audio: "/assets/Audio/alif.mp3",
+  },
+  {
+    name: "باء",
+    letter: "ب",
+    img: "/assets/imgs/ba.jpg",
+    audio: "/assets/Audio/ba.mp3",
+  },
+  {
+    name: "تاء",
+    letter: "ت",
+    img: "/assets/imgs/ta.jpg",
+    audio: "/assets/Audio/ta.mp3",
+  },
+  {
+    name: "ثاء",
+    letter: "ث",
+    img: "/assets/imgs/tha.jpg",
+    audio: "/assets/Audio/tha.mp3",
+  },
+  {
+    name: "جيم",
+    letter: "ج",
+    img: "/assets/imgs/jiim.jpg",
+    audio: "/assets/Audio/jiim.mp3",
+  },
+  {
+    name: "حاء",
+    letter: "ح",
+    img: "/assets/imgs/hha.jpg",
+    audio: "/assets/Audio/hha.mp3",
+  },
+  {
+    name: "خاء",
+    letter: "خ",
+    img: "/assets/imgs/kha.jpg",
+    audio: "/assets/Audio/kha.mp3",
+  },
+  {
+    name: "دال",
+    letter: "د",
+    img: "/assets/imgs/daal.jpg",
+    audio: "/assets/Audio/daal.mp3",
+  },
+  {
+    name: "ذال",
+    letter: "ذ",
+    img: "/assets/imgs/thaal.png",
+    audio: "/assets/Audio/thaal.mp3",
+  },
+  {
+    name: "راء",
+    letter: "ر",
+    img: "/assets/imgs/ra.jpg",
+    audio: "/assets/Audio/ra.mp3",
+  },
+  {
+    name: "زاي",
+    letter: "ز",
+    img: "/assets/imgs/zay.png",
+    audio: "/assets/Audio/zay.mp3",
+  },
+  {
+    name: "سين",
+    letter: "س",
+    img: "/assets/imgs/siin.jpg",
+    audio: "/assets/Audio/siin.mp3",
+  },
+  {
+    name: "شين",
+    letter: "ش",
+    img: "/assets/imgs/shiin.jpg",
+    audio: "/assets/Audio/shiin.mp3",
+  },
+  {
+    name: "صاد",
+    letter: "ص",
+    img: "/assets/imgs/saad.jpg",
+    audio: "/assets/Audio/saad.mp3",
+  },
+  {
+    name: "ضاد",
+    letter: "ض",
+    img: "/assets/imgs/daad.jpg",
+    audio: "/assets/Audio/daad.mp3",
+  },
+  {
+    name: "طاء",
+    letter: "ط",
+    img: "/assets/imgs/taa.jpg",
+    audio: "/assets/Audio/taa.mp3",
+  },
+  {
+    name: "ظاء",
+    letter: "ظ",
+    img: "/assets/imgs/thaa.jpg",
+    audio: "/assets/Audio/thaa.mp3",
+  },
+  {
+    name: "عين",
+    letter: "ع",
+    img: "/assets/imgs/ayn.jpg",
+    audio: "/assets/Audio/ayn.mp3",
+  },
+  {
+    name: "غين",
+    letter: "غ",
+    img: "/assets/imgs/ghayn.jpg",
+    audio: "/assets/Audio/ghayn.mp3",
+  },
+  {
+    name: "فاء",
+    letter: "ف",
+    img: "/assets/imgs/fa.jpg",
+    audio: "/assets/Audio/fa.mp3",
+  },
+  {
+    name: "قاف",
+    letter: "ق",
+    img: "/assets/imgs/qaf.jpg",
+    audio: "/assets/Audio/qaf.mp3",
+  },
+  {
+    name: "كاف",
+    letter: "ك",
+    img: "/assets/imgs/kaf.jpg",
+    audio: "/assets/Audio/kaf.mp3",
+  },
+  {
+    name: "لام",
+    letter: "ل",
+    img: "/assets/imgs/lam.jpg",
+    audio: "/assets/Audio/lam.mp3",
+  },
+  {
+    name: "ميم",
+    letter: "م",
+    img: "/assets/imgs/miim.jpg",
+    audio: "/assets/Audio/miim.mp3",
+  },
+  {
+    name: "نون",
+    letter: "ن",
+    img: "/assets/imgs/nuun.jpg",
+    audio: "/assets/Audio/nuun.mp3",
+  },
+  {
+    name: "هاء",
+    letter: "ه",
+    img: "/assets/imgs/ha.jpg",
+    audio: "/assets/Audio/ha.mp3",
+  },
+  {
+    name: "واو",
+    letter: "و",
+    img: "/assets/imgs/waw.jpg",
+    audio: "/assets/Audio/waw.mp3",
+  },
+  {
+    name: "ياء",
+    letter: "ي",
+    img: "/assets/imgs/ya.jpg",
+    audio: "/assets/Audio/ya.mp3",
+  },
+];
+
+
+export default arabicAlphabet;

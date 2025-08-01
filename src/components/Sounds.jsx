@@ -1,7 +1,7 @@
-
+const base = import.meta.env.BASE_URL;
 
 export default function Sounds(){
-    let fullAudio = new Audio('/assets/Audio/full.mp3')
+    let fullAudio = new Audio(`${base}assets/Audio/full.mp3`)
     function PlayAudio(){
         fullAudio.play()
     }

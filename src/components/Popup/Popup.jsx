@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import Alphabet from '../Alphabet'
 import './Popup.css'
 
@@ -6,8 +6,8 @@ export default function Popup({letter, onClose}){
   if (!letter) return null;
 
   function close() {
-    onClose(); // trigger App's close handler
-    onSelect()
+    onClose(); 
+
   }
 
     return(

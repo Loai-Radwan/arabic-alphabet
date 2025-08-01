@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import '../public/noramlize.css'
+import Header from './components/Header/Header';
+import '../public/main.css'
+import Popup from './components/Popup/Popup';
+
+import { useState } from 'react';
+import LetterGrid from './components/Letter/LetterGrid';
+import Letters from './data'
+import Sounds from './components/Sounds';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showPopup , setShowPopup] = useState(false)
+  const [selectedLetter, setSelectedLetter] = useState(null);
 
-  return (
+  function handleLetterClick(letter) {
+    setSelectedLetter(letter);     // set current letter
+    setShowPopup(true);            // open popup
+  }
+
+function handleClose(){
+  setShowPopup(was => !was)
+  setSelectedLetter(null)
+}
+
+  return ( 
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {showPopup &&  <Popup 
+  onClose={handleClose} 
+  letter={selectedLetter}    />  }
+    <Header/>
+ 
+    <LetterGrid letters={Letters} onLetterClick={handleLetterClick} />
+    
+   <Sounds />
     </>
   )
 }
+
 
 export default App

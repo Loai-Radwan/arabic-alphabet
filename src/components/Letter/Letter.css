@@ -1,0 +1,99 @@
+
+
+
+
+.letter-box{
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    line-height: 250px;
+    box-shadow: -3px 3px 10px #00000078;
+}
+.letter-box:hover{
+    transform: scale(1.07);
+    border-color: #4CAF50;
+}
+.letter-box p{
+    font-size: 90px;
+}
+
+/* 
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 15px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .letter-box {
+      background-color: white;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #4CAF50;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .letter-box:hover {
+      transform: scale(1.1);
+      border-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>الحروف العربية</h1>
+
+  <div class="grid">
+    <div class="letter-box">ا</div>
+    <div class="letter-box">ب</div>
+    <div class="letter-box">ت</div>
+    <div class="letter-box">ث</div>
+    <div class="letter-box">ج</div>
+    <div class="letter-box">ح</div>
+    <div class="letter-box">خ</div>
+    <div class="letter-box">د</div>
+    <div class="letter-box">ذ</div>
+    <div class="letter-box">ر</div>
+    <div class="letter-box">ز</div>
+    <div class="letter-box">س</div>
+    <div class="letter-box">ش</div>
+    <div class="letter-box">ص</div>
+    <div class="letter-box">ض</div>
+    <div class="letter-box">ط</div>
+    <div class="letter-box">ظ</div>
+    <div class="letter-box">ع</div>
+    <div class="letter-box">غ</div>
+    <div class="letter-box">ف</div>
+    <div class="letter-box">ق</div>
+    <div class="letter-box">ك</div>
+    <div class="letter-box">ل</div>
+    <div class="letter-box">م</div>
+    <div class="letter-box">ن</div>
+    <div class="letter-box">ه</div>
+    <div class="letter-box">و</div>
+    <div class="letter-box">ي</div>
+  </div> */
+

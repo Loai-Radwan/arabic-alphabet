@@ -172,3 +172,4 @@ const arabicAlphabet = [
 ];
 
 export default arabicAlphabet;
+

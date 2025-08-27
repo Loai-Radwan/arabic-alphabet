@@ -7,20 +7,25 @@ import Popup from './components/Popup/Popup';
 import { useState } from 'react';
 import LetterGrid from './components/Letter/LetterGrid';
 import Letters from './data'
-import Sounds from './components/Sounds';
+import QuizGrid from './components/Quiz/QuizGied';
 
 function App() {
   const [showPopup , setShowPopup] = useState(false)
   const [selectedLetter, setSelectedLetter] = useState(null);
 
+  const [state , setState] = useState('learn')
+
   function handleLetterClick(letter) {
-    setSelectedLetter(letter);     // set current letter
-    setShowPopup(true);            // open popup
+    setSelectedLetter(letter);     
+    setShowPopup(true);           
   }
 
 function handleClose(){
   setShowPopup(was => !was)
   setSelectedLetter(null)
+}
+function handleChange(tab){
+  setState(tab)
 }
 
   return ( 
@@ -28,12 +33,11 @@ function handleClose(){
       {showPopup &&  <Popup 
   onClose={handleClose} 
   letter={selectedLetter}    />  }
-    <Header/>
- 
-    <LetterGrid letters={Letters} onLetterClick={handleLetterClick} />
-    
-   <Sounds />
-    </>
+    <Header state={state} handleChange={handleChange} />
+    {state == 'learn' && <LetterGrid letters={Letters} onLetterClick={handleLetterClick} />}
+    {state == 'quiz' && <QuizGrid  />}
+
+  </>
   )
 }
 

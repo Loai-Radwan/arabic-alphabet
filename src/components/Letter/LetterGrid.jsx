@@ -1,5 +1,6 @@
 
 import Letter from "./Letter"
+import Sounds from "../Sounds"
 
 export default function LetterGrid({letters,onLetterClick }){
 
@@ -9,6 +10,9 @@ export default function LetterGrid({letters,onLetterClick }){
          
          <Letter onClick={onLetterClick  }    key={letter.name} letterData={letter}  />
         ))}
+
+    <Sounds />
+
     </div>
     )
 }

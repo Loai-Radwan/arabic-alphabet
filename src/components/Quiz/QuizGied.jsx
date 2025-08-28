@@ -2,7 +2,7 @@ import Quiz from "./Quiz";
 
 import './quiz.css'
 import quiz from "../../quiz";
-import { useCallback, useState } from "react";
+import { useCallback, useState , useEffect } from "react";
 import Results from "./Result";
 
 
@@ -23,7 +23,9 @@ export default function QuizGrid() {
     function handleChange(event){
         setStart(prev => ({...prev , numberOfQuestion : event.target.value}))
     }
-    const [questions, setQuestion] = useState(quiz.sort(() => Math.random() - 0.5).slice(0, start.numberOfQuestion))
+
+    const [questions, setQuestion] = useState([])
+
 
 
     const increaseRight = useCallback(() => {
@@ -37,6 +39,10 @@ export default function QuizGrid() {
     function handleStart(){
         setStart(prev => ({...prev , isStart : true}))
     }
+
+    useEffect(() => {
+    setQuestion(quiz.sort(() => Math.random() - 0.5).slice(0, start.numberOfQuestion))
+  }, [start.numberOfQuestion]);
 
     let showResult = questions.length === current
 
@@ -65,7 +71,9 @@ export default function QuizGrid() {
         {!showResult && <div className="quizGrid" >
             {start.isStart == false && <div className="start" > 
                 <h2>اختر عدد الأسئلة</h2>
-                <input type="number" onChange={handleChange} value={start.numberOfQuestion} />
+
+                    <input type="number" onChange={handleChange} value={start.numberOfQuestion} min='0' max='28' />
+
                 <button onClick={handleStart} >ابدأ</button>
             </div> }
 

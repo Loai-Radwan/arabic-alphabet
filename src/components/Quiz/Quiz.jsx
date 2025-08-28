@@ -1,5 +1,5 @@
-import { useRef } from "react"
-export default function Quiz({question  , increaseCurrent}){
+import { memo, useRef } from "react"
+function Quiz({question  , increaseCurrent , increaseRight , addAnswer}){
     const answers = useRef()
     function PlayAudio(){
         let audio = new Audio(question.audio)
@@ -9,20 +9,29 @@ export default function Quiz({question  , increaseCurrent}){
     function handleClick(element , answer){
         element.classList.add('selected')
         answers.current.classList.add('disabled')
+
+        let answerState = false
         setTimeout(() => {
             if (answer === question.answer){
                 element.classList.add('right')
-                
+                answerState = true
+                // increaseRight()
+                // addAnswer(answer)
             }else{
                 element.classList.add('wrong')
+                // addAnswer(answer)
             }
         } , 1000)
         setTimeout(() => {
-            increaseCurrent()
             element.classList.remove('right')
             element.classList.remove('wrong')
             element.classList.remove('selected')
             answers.current.classList.remove('disabled')
+            increaseCurrent()
+            addAnswer(answer , answerState)
+            if (answer === question.answer){
+                increaseRight()
+            }
         } , 2000)
     }
 
@@ -37,3 +46,4 @@ export default function Quiz({question  , increaseCurrent}){
             </div>
     </div>
 }
+export default memo(Quiz)
